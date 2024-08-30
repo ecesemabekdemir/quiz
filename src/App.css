@@ -498,14 +498,15 @@ body.dark {
     line-height: 18px;
     text-align: left;
   }
+  .scoreText {
+    margin-bottom: 64px;
+  }
 }
 
 /* ------------------------------------------------Mobil */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    text-align: center;
-    margin-block: 50px;
+    margin: 40px 64px;
   }
   .categorieSection {
     margin: 0 auto;
@@ -519,10 +520,10 @@ body.dark {
     line-height: 1.1;
     padding: 0;
   }
-
-  .btnOption {
-    width: 327px;
+  .questionSection {
+    padding: 50px 64px;
   }
+ 
 
   .questionBox {
     flex-direction: column;
@@ -542,10 +543,15 @@ body.dark {
 
   .scorePage {
     width: 100%;
-    padding: 32px;
+    padding: 24px 32px;
+  }
+  .scoreBox {
+    padding: 24px 32px;
   }
 
   .submitBtn {
-    padding: 16px 80px;
+    padding:19px 118px;
   }
+
+
 }
