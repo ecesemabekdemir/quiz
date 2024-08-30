@@ -1,31 +1,22 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/* Genel Ayarlar */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
   margin: 0;
 }
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
+
 body {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   background-image: url(img/background.svg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
-/*
-  5. Improve media defaults
-*/
+
 img,
 picture,
 video,
@@ -34,18 +25,14 @@ svg {
   display: block;
   max-width: 100%;
 }
-/*
-  6. Remove built-in form typography styles
-*/
+
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-/*
-  7. Avoid text overflows
-*/
+
 p,
 h1,
 h2,
@@ -55,13 +42,12 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/*
-  8. Create a root stacking context
-*/
+
 #root,
 #__next {
   isolation: isolate;
 }
+
 a {
   text-decoration: none;
 }
@@ -70,11 +56,14 @@ button {
   cursor: pointer;
 }
 
+/* Genel genişlik ayarı */
 .container {
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
+/* Header */
 .header {
   display: flex;
   align-items: center;
@@ -88,6 +77,7 @@ button {
   gap: 16px;
 }
 
+/* Kategori Bölümü */
 .categorieSection {
   display: flex;
   align-items: start;
@@ -97,13 +87,15 @@ button {
 }
 
 .categorieSection h2 {
-  width: 465px;
+  width: 100%;
+  max-width: 465px;
   font-size: 64px;
   font-weight: 300;
   line-height: 64px;
   text-align: left;
   padding: 0 12px 85px 0;
 }
+
 .categories h2 strong {
   font-weight: 500;
 }
@@ -121,7 +113,8 @@ h2 span {
 }
 
 .btnOption {
-  width: 564px;
+  width: 100%;
+  max-width: 564px;
   border: none;
   border-radius: 24px;
   cursor: pointer;
@@ -143,6 +136,7 @@ h2 span {
   gap: 24px;
 }
 
+/* Soru Bölümü */
 .questionBox {
   display: flex;
   align-items: start;
@@ -162,7 +156,8 @@ h2 span {
 }
 
 .question {
-  width: 465px;
+  width: 100%;
+  max-width: 465px;
 }
 
 .question h3 {
@@ -173,7 +168,8 @@ h2 span {
 }
 
 .options {
-  width: 564px;
+  width: 100%;
+  max-width: 564px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -315,23 +311,22 @@ input:checked + .slider:before {
   gap: 16px;
 }
 
-.scoreBox .scoreText {
-  h3 {
-    font-size: 64px;
-    font-weight: 300;
-    line-height: 64px;
-    text-align: left;
-    color: #313e51;
-  }
-
-  strong {
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 64px;
-    text-align: left;
-    color: #313e51;
-  }
+.scoreBox .scoreText h3 {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  text-align: left;
+  color: #313e51;
 }
+
+.scoreBox .scoreText strong {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: left;
+  color: #313e51;
+}
+
 .categoriesTitle h2 {
   color: #313e51;
 }
@@ -341,89 +336,94 @@ body.dark {
   background-size: cover;
 }
 
-.dark {
-  .btnOption {
-    color: #ffffff;
-    background-color: #3b4d66;
-    .optionText {
-      color: #ffffff;
-    }
-  }
+.dark .btnOption {
+  color: #ffffff;
+  background-color: #3b4d66;
+}
 
-  .question {
-    color: #ffffff;
-  }
-  .categoriesTitle h2 {
-    color: #ffffff;
-  }
-  .text {
-    color: #ffffff;
-  }
+.dark .optionText {
+  color: #ffffff;
+}
 
-  .categories {
-    color: #ffffff;
-  }
-  .harf {
-    padding: 12px;
-    background-color: #f4f6fa;
-    color: #626c7f;
-  }
+.dark .question {
+  color: #ffffff;
+}
 
-  .scoreText h3 {
-    color: #ffffff;
-    font-size: 64px;
-    font-weight: 300;
-    line-height: 64px;
-    text-align: left;
-  }
-  .scoreText strong {
-    color: #ffffff;
-  }
+.dark .categoriesTitle h2 {
+  color: #ffffff;
+}
 
-  .scorePage h3 {
-    color: #ffffff;
+.dark .text {
+  color: #ffffff;
+}
 
-  }
-  .scorePage strong {
-    color: #ffffff;
+.dark .categories {
+  color: #ffffff;
+}
 
-  }
-  .scorePage p {
-    color: #ffffff;
+.dark .harf {
+  padding: 12px;
+  background-color: #f4f6fa;
+  color: #626c7f;
+}
 
-  }
+.dark .scoreText h3 {
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  text-align: left;
+}
 
+.dark .scoreText strong {
+  color: #ffffff;
+}
+
+.dark .scorePage h3 {
+  color: #ffffff;
+}
+
+.dark .scorePage strong {
+  color: #ffffff;
+}
+
+.dark .scorePage p {
+  color: #ffffff;
 }
 
 .scorePage {
-  width: 564px;
+  width: 100%;
+  max-width: 564px;
   box-shadow: 0px 16px 40px 0px #8fa0c124;
   align-items: center;
   text-align: center;
   padding: 48px;
-  strong {
-    font-size: 144px;
-    font-weight: 500;
-    line-height: 144px;
-    color: #313e51;
-    margin-bottom: 40px;
-  }
-  h3 {
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 28px;
-    margin-bottom: 54px;
-    text-align: center;
-    color: #313e51;
-  }
-  p {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
-    text-align: center;
-    color: #626c7f;
-    margin-bottom: 48px;
-  }
+}
+
+.scorePage strong {
+  font-size: 144px;
+  font-weight: 500;
+  line-height: 144px;
+  color: #313e51;
+  margin-bottom: 40px;
+}
+
+.scorePage h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 54px;
+  text-align: center;
+  color: #313e51;
+}
+
+.scorePage p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  color: #626c7f;
+  margin-bottom: 48px;
 }
 
 .scoreBox {
@@ -444,4 +444,108 @@ body.dark {
   text-align: left;
   border-radius: 16px;
   border: 1px solid #a729f5;
+}
+
+/* Tablet------------------------------------------------------------------ */
+@media (max-width: 992px) {
+  .categorieSection {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 64px;
+    gap: 64px;
+  }
+  .categorieSection h2 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  .questionSection {
+    padding-inline: 24px;
+  }
+  .questionSection h3 {
+    font-size: 20px;
+  }
+  .btnOption {
+    width: 640px;
+  }
+
+  .questionBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .question h3 {
+    font-size: 32px;
+  }
+
+  .options {
+    justify-content: center;
+  }
+
+  .scoreBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .optionText {
+    font-size: 18px;
+  }
+  .submitBtn {
+    padding: 20px 120px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+  }
+}
+
+/* ------------------------------------------------Mobil */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    margin-block: 50px;
+  }
+  .categorieSection {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .categorieSection h2 {
+    font-size: 32px;
+    line-height: 1.1;
+    padding: 0;
+  }
+
+  .btnOption {
+    width: 327px;
+  }
+
+  .questionBox {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .question h3 {
+    font-size: 28px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .scorePage {
+    width: 100%;
+    padding: 32px;
+  }
+
+  .submitBtn {
+    padding: 16px 80px;
+  }
 }
