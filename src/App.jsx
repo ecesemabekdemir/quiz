@@ -523,6 +523,10 @@ function Question({ selectedCategory }) {
   );
 }
 
+// function handleStartPage() {
+  
+// }
+
 function LastPage({ count, selectedCategory }) {
   return (
     <div className="scoreBox">
@@ -534,7 +538,7 @@ function LastPage({ count, selectedCategory }) {
         <h3>{selectedCategory}</h3>
         <strong>{count}</strong>
         <p>10 üzerinden</p>
-        <button onClick={() => StartMenu()} className="scoreBtn ">
+        <button onClick={() => handleStartPage()} className="scoreBtn ">
           Tekrar Oyna
         </button>
       </div>
